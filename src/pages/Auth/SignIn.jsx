@@ -88,18 +88,14 @@ function SigninForm() {
         <button type="submit" className="form__button">
           Entrar
         </button>
-        <div className="form__or">
+        {/* <div className="form__or">
           <div className="divider">
             <span> Ou </span>
           </div>
           <div id="signInDiv" >
             
           </div>
-          {/* <div  className="google">
-            <img src={googleImg} alt="" />
-            <span>Entre com o Google</span>
-          </div> */}
-        </div>
+        </div> */}
 
         <span className="form__swap">
           Não tem uma conta? <Link to={"/signup"}> Faça o cadastro! </Link>
