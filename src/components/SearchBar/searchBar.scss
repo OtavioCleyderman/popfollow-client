@@ -1,0 +1,46 @@
+@import "../../styles/theme.scss";
+
+.search {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  align-items: center;
+  border-radius: 0.5rem;
+  height: 5rem;
+  border: 1px solid var(--button-background-primary);
+  margin-bottom: 2rem;
+
+  :first-child {
+    width: 5rem;
+    fill: var(--button-background-primary);
+  }
+
+  input {
+    border: none;
+    width: 100%;
+    outline: none;
+    height: 2rem;
+    padding: 1.5rem;
+  }
+
+  .reset-button {
+    position: absolute;
+    font-size: 2.5rem;
+    right: 8px; /* Ajuste a posição conforme necessário */
+    top: 57%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  @media (min-width: 720px) {
+    margin: 0 auto;
+    height: 3.5rem;
+    align-items: center;
+      & > input{
+        width: 50vw;
+      }
+    }
+}

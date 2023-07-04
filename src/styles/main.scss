@@ -1,0 +1,13 @@
+@import "./theme.scss";
+
+html {
+  font-size: 62.5%;
+  background-color: var(--background-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}

@@ -1,0 +1,61 @@
+@import "../../styles/theme.scss";
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 1.5rem;
+  border-top: 1px solid rgb(200, 194, 194);
+  background-color: var(--background-color);
+  
+  & > a {
+    text-decoration: none;
+    color: var(--primary-color);
+
+    & > li {
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      flex-direction: column;
+      & > svg {
+        font-size: 2rem;
+      }
+
+      & > span {
+        font-size: clamp(1.2rem, 1.5vw, 2.5rem);
+      }
+    }
+  }
+
+  @media (min-width: 720px) {
+    position: absolute;
+    height: 5rem;
+    top: 4%;
+    left: 35%;
+    max-width: clamp(35rem, 55vw, 55rem);
+    background-color: transparent;
+    border: none;
+    
+    & > a {
+      & > li {
+        & > svg {
+          display: none;
+        }
+        & > span {
+          font-size: clamp(2rem, 2vw, 3rem);
+        }
+      }
+    }
+  }
+
+}
+
+
+
+

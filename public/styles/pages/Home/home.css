@@ -1,0 +1,47 @@
+.home {
+  color: var(--text-color);
+  margin-bottom: 7rem; }
+  .home .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200rem; }
+    .home .cards .card {
+      width: 35rem;
+      text-align: center;
+      margin: 1rem;
+      border: solid 1px var(--text-color);
+      border-radius: 2rem;
+      padding: 0;
+      position: relative; }
+      .home .cards .card > a {
+        text-decoration: none; }
+      .home .cards .card__image > img {
+        width: 100%;
+        object-fit: cover;
+        height: 52.2rem;
+        border-radius: 2rem 2rem 0 0; }
+      .home .cards .card__title {
+        color: var(--text-color);
+        font-size: clamp(2rem, 1.5vw, 2.5rem);
+        margin: 2rem 1rem; }
+      .home .cards .card__favorite {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        transition: color 0.3s ease;
+        color: #ffffff;
+        position: absolute;
+        top: 0.8rem;
+        right: 0.8rem; }
+        .home .cards .card__favorite > svg {
+          font-size: 3.5rem; }
+        .home .cards .card__favorite > svg > path {
+          stroke: black;
+          stroke-width: 5rem; }
+        .home .cards .card__favorite.favorited {
+          color: red; }
+  @media (min-width: 720px) {
+    .home .cards {
+      justify-content: flex-start; } }

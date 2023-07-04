@@ -1,0 +1,18 @@
+.header {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  border-bottom: 1px solid #c8c2c2; }
+  @media only screen and (max-width: 286px) {
+    .header {
+      height: 15rem; } }
+  @media (min-width: 720px) {
+    .header {
+      display: flex;
+      height: 15rem;
+      align-items: flex-start; } }

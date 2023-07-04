@@ -1,0 +1,84 @@
+@import '../../styles/theme.scss';
+
+.gender-selection {
+  display: flex;
+  margin-bottom: 10px;
+  
+
+  label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+  }
+}
+.account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+
+  & > h2 {
+    margin-bottom: .7rem;
+  }
+
+  .account-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .account-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .account-username {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  }
+
+  .account-logout {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+  }
+
+  button {
+    margin-top: 10px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .account-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

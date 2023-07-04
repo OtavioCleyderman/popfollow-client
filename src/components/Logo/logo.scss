@@ -1,0 +1,25 @@
+@import "../../styles/theme.scss";
+
+.logo {
+  text-decoration: none;
+  
+  & > h1 {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(3.2rem, 3vw, 4rem);
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 286px) {
+    width: 7rem;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(2.8rem, 3vw, 4rem);
+  }
+
+  @media (min-width: 720px) {
+    margin: 0 0 0 1rem;
+  }
+}

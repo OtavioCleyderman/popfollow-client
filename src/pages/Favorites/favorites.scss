@@ -1,0 +1,63 @@
+@import '../../styles/theme.scss';
+
+.favorites {
+  color: var(--text-color);
+  margin-bottom: 7rem;
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200rem; 
+  
+    .card {
+      width: 35rem;
+      text-align: center;
+      margin: 1rem ;
+      border: solid 1px var(--text-color);
+      border-radius: 2rem;
+      padding: 0 0 2rem 0;
+      position: relative;
+
+      & > a {
+        text-decoration: none;
+      }
+
+      &__image > img {
+        width: 100%;
+        object-fit: cover;
+        height: 52.2rem;
+        border-radius: 2rem 2rem 0 0;
+        
+      }
+
+      &__title{
+        color: var(--text-color);
+        font-size: clamp(2rem, 2vw, 3.2rem);
+        margin: 2rem 0;
+      }
+
+      &__remove{
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        transition: color 0.3s ease;
+        color: red;
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+
+        & > svg {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 720px) {
+    .cards {
+      justify-content: flex-start;
+    }
+  }
+}

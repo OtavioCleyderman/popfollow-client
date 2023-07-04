@@ -1,0 +1,63 @@
+.btn__container {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem; }
+  .btn__container .btn__create {
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center; }
+    .btn__container .btn__create > svg {
+      color: var(--primary-color);
+      font-size: clamp(3rem, 4vw, 5rem);
+      font-weight: 700; }
+  .btn__container .modal__content {
+    background-color: var(--background-color);
+    box-shadow: 0px 5px 20px #acabab; }
+  .btn__container .form {
+    width: 90%;
+    max-width: 40rem;
+    padding: 3rem;
+    border-radius: 5px; }
+    .btn__container .form > button.btn-submit {
+      width: 100%;
+      padding: 1rem;
+      background-color: var(--primary-color);
+      font-weight: 800;
+      border: none;
+      border-radius: 5rem; }
+    .btn__container .form__group {
+      display: flex;
+      margin: 0.5rem 0;
+      flex-direction: column; }
+    .btn__container .form__group--hidden {
+      display: none; }
+    .btn__container .form__group > label {
+      color: var(--text-color);
+      font-weight: 700;
+      font-size: clamp(1.6rem, 1.6vw, 2.5rem); }
+    .btn__container .form__group > input,
+    .btn__container .form__group > select,
+    .btn__container .form__group > textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: clamp(1.6rem, 1.6vw, 2.5rem);
+      color: var(--text-color);
+      background-color: var(--background-color);
+      border: 1px solid; }
+      .btn__container .form__group > input::placeholder,
+      .btn__container .form__group > select::placeholder,
+      .btn__container .form__group > textarea::placeholder {
+        color: var(--text-color); }
+    .btn__container .form .btn-submit {
+      cursor: pointer; }
+    @media (min-width: 720px) {
+      .btn__container .form {
+        width: 100%;
+        min-width: 50rem; } }

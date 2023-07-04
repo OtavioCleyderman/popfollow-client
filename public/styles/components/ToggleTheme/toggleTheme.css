@@ -1,0 +1,38 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 1.5rem;
+  top: 0.8rem; }
+
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  color: #000;
+  padding: 0.7rem;
+  border: 1px solid var(--background-color);
+  border-radius: 20%;
+  box-shadow: 0px 0.5rem 2rem #acabab; }
+
+.toggle-btn:focus {
+  outline: none; }
+
+.toggle .fa-sun,
+.toggle .fa-moon {
+  transition: color 0.3s; }
+
+.toggle .fa-sun {
+  color: #f9c74f; }
+
+.toggle .fa-moon {
+  color: #4d4d4d; }
+
+.toggle.dark .fa-sun {
+  color: #f9c74f; }
+
+.toggle.light .fa-moon {
+  color: #4d4d4d; }
