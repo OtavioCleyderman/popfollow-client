@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./styles.scss";
-import googleImg from "../../assets/google.png";
 import axios from "axios";
 
 const Form = () => {
@@ -104,7 +103,7 @@ const Form = () => {
         <button className="form__button" type="submit">
           Cadastrar
         </button>
-        <div className="form__or">
+        {/* <div className="form__or">
           <div className="divider">
             <span> Ou </span>
           </div>
@@ -112,7 +111,7 @@ const Form = () => {
             <img src={googleImg} alt="" />
             <span>Cadastre-se com o Google</span>
           </div>
-        </div>
+        </div> */}
         <span className="form__swap">
           Já tem uma conta? <Link to={"/signin"}> Faça o login! </Link>
         </span>
