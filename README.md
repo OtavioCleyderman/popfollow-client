@@ -141,7 +141,7 @@ Pronto, após realizar os passos acima o projeto já iniciou e está rodando na 
     http://localhost:5173/
 ```
 
-# Próxios passos do projeto como um todo (front e back)
+# Próximos passos do projeto como um todo (front e back)
 
 - [ ]  Adicionar melhorias na navegação
 - [ ]  Habilitar o cadastro e login com o Google
