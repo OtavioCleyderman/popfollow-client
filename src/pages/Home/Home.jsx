@@ -81,8 +81,6 @@ function Home({ searchValue, onFilter }) {
       return <Loader />;
     }
 
-    
-
     return (
       <div className="home">
         <Cards>

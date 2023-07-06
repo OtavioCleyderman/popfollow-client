@@ -28,7 +28,6 @@ function Favorites({ searchValue, onFilter}) {
     "https://img.freepik.com/vetores-premium/padrao-sem-emenda-com-filmes-e-series-de-programas-de-tv-de-cinema-engracado-doodle-vetor-icones-desenhados-a-mao-colorfu_497982-414.jpg?w=2000";
 
   useEffect(() => {
-    
     async function fetchData() {
       const favorites = await getFavorites(token, userId);
       const favoriteTitleIds = favorites.map((title) => title._id);
@@ -50,9 +49,7 @@ function Favorites({ searchValue, onFilter}) {
 
   const handleRemoveFavorite = async (titleId) => {
     try {
-      
       await removeFromFavorites(token, titleId, userId);
-
       setTitlesFavorites(titlesFavorites.filter((title) => title._id !== titleId));
       setFavoriteTitles((prevFavorites) =>
         prevFavorites.filter((id) => id !== titleId)

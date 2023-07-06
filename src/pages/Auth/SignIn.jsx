@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useContext, useEffect, useState} from "react";
+import { useContext, useEffect} from "react";
 import { AuthContext } from '../../AuthContext'
 import "./styles.scss";
 
@@ -96,7 +96,6 @@ function SigninForm() {
             
           </div>
         </div> */}
-
         <span className="form__swap">
           Não tem uma conta? <Link to={"/signup"}> Faça o cadastro! </Link>
         </span>

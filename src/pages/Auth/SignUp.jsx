@@ -46,7 +46,7 @@ const Form = () => {
         formData
       );
       // console.log(response.data);
-      alert(response.data); // Aqui você pode tratar a resposta do backend
+      alert(response.data); 
       navigate("/signin");
     } catch (error) {
       console.error(error);

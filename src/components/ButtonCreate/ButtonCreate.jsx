@@ -13,6 +13,7 @@ function ButtonCreate() {
   const [tipoValue, setTipoValue] = useState("");
   const [overviewValue, setOverviewValue] = useState("");
   const [isAnimeOrSerie, setIsAnimeOrSerie] = useState(false);
+  const [isMovie, setIsMovie] = useState(false);
 
   const handleShowModal = () => {
     setIsModalOpen(true);
@@ -31,6 +32,7 @@ function ButtonCreate() {
     const { value } = event.target;
     setTipoValue(value);
     setIsAnimeOrSerie(value === "Anime" || value === "Serie");
+    setIsMovie(value === "Filme");
   };
 
   const handleSubmit = async (event) => {
@@ -104,8 +106,12 @@ function ButtonCreate() {
             <input type="text" id="imagem" placeholder="Insira um link.."/>
           </div>
           <div className={`form__group${isAnimeOrSerie ? "" : " form__group--hidden"}`}>
-            <label htmlFor="qtdeEp">Quantidade de episódios:</label>
+            <label htmlFor="qtdeEp">Quantidade total de episódios:</label>
             <input type="number" id="qtdeEp" />
+          </div>
+          <div className={`form__group${isMovie ? "" : " form__group--hidden"}`}>
+            <label htmlFor="qtdeEp">Duração em minutos:</label>
+            <input type="number" id="qtdeEp"/>
           </div>
           <button className="btn-submit">Enviar</button>
         </form>
