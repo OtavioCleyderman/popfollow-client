@@ -38,9 +38,9 @@ function Details() {
   const handleGoBack = () => {
     navigate(-1);
     // Evitar ficar ainda o ultimo filtro ao voltar na pilha
-    setTimeout(() => {
-      window.location.reload()
-    }, 2000);    
+    // setTimeout(() => {
+    //   window.location.reload()
+    // }, 2000);    
   };
 
   useEffect(() => {
