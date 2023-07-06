@@ -4,6 +4,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import {AuthContext} from '../../AuthContext'
 import {IoCaretBack , IoAdd, IoCheckmarkOutline}  from 'react-icons/io5'
 import axios from 'axios';
+import Loader from '../../components/Loader/Loader'
 import {
   getFavorites,
   getWatcheds,
@@ -89,7 +90,7 @@ function Details() {
   }, [id, token, watcheds]);
   
   if (!titleDetails) {
-    return <div style={{color: 'red'}}>Loading...</div>;
+    return <Loader />;
   }
 
   const handleToggleOverview = () => setShowFullOverview(!showFullOverview);
