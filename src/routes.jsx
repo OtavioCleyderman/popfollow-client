@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
@@ -32,9 +32,9 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route index element={ <ProtectedRoute><Home searchValue={searchValue}/></ProtectedRoute>} />
-        <Route path="/favorites" element={<ProtectedRoute><Favorites searchValue={searchValue} /></ProtectedRoute>} />
-        <Route path="/details/:id" element={<ProtectedRoute><Details searchValue={searchValue} /></ProtectedRoute>} />
+        <Route index element={ <ProtectedRoute><Home searchValue={searchValue} onFilter={handleFilter}/></ProtectedRoute>} />
+        <Route path="/favorites" element={<ProtectedRoute><Favorites searchValue={searchValue} onFilter={handleFilter}/></ProtectedRoute>} />
+        <Route path="/details/:id" element={<ProtectedRoute><Details /></ProtectedRoute>} />
         <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
       </Routes>
       {showHeaderAndNav && <Nav />}

@@ -13,7 +13,7 @@ import {
 } from "../../assets/titlesApi";
 
 
-function Home({ searchValue }) {
+function Home({ searchValue, onFilter }) {
   const { token, user } = useContext(AuthContext);
   const [titles, setTitles] = useState([]);
   const [filteredTitles, setFilteredTitles] = useState([]);
@@ -42,6 +42,7 @@ function Home({ searchValue }) {
         }));
   
         setTitles(titlesWithFavorites);
+        setFilteredTitles(titlesWithFavorites); 
         setFavoriteTitles(favoriteTitleIds);
       }
   
@@ -54,6 +55,7 @@ function Home({ searchValue }) {
       );
       setFilteredTitles(filtered);
     }, [titles, searchValue]);
+
   
     const isTitleFavorite = (titleId) => {
       return favoriteTitles.includes(titleId);
@@ -74,17 +76,23 @@ function Home({ searchValue }) {
         console.log(error);
       }
     };
-  
+
     if (titles.length === 0) {
       return <Loader />;
     }
+
+    
 
     return (
       <div className="home">
         <Cards>
         {filteredTitles.map((title) => (
             <div className="card" key={title._id}>
-              <Link to={`/details/${title._id}`} className="card__link">
+              <Link 
+                to={`/details/${title._id}`} 
+                className="card__link"
+                onClick={() => onFilter('')}
+              >
                 <div className="card__image">
                   <img
                     loading="lazy"

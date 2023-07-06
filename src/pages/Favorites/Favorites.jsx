@@ -10,7 +10,7 @@ import {
 } from "../../assets/titlesApi";
 import './favorites.scss'
 
-function Favorites({ searchValue }) {
+function Favorites({ searchValue, onFilter}) {
   const { token, user } = useContext(AuthContext);
   const [titlesFavorites, setTitlesFavorites] = useState([]);
   const [filteredTitles, setFilteredTitles] = useState([]);
@@ -75,7 +75,11 @@ function Favorites({ searchValue }) {
       <Cards >
       {filteredTitles.map((title) => (
           <div className="card" key={title._id}>
-          <Link to={`/details/${title._id}`} className="card__link">
+          <Link 
+            to={`/details/${title._id}`} 
+            className="card__link"
+            onClick={() => onFilter('')}
+          >
             <div className="card__image">
               <img
                 src={

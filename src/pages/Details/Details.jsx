@@ -1,6 +1,6 @@
 import './details.scss'
 import { useEffect, useState, useContext } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import {AuthContext} from '../../AuthContext'
 import {IoCaretBack , IoAdd, IoCheckmarkOutline}  from 'react-icons/io5'
 import axios from 'axios';
@@ -34,13 +34,8 @@ function Details() {
     userId = user._id;
   }
   
-
   const handleGoBack = () => {
     navigate(-1);
-    // Evitar ficar ainda o ultimo filtro ao voltar na pilha
-    // setTimeout(() => {
-    //   window.location.reload()
-    // }, 2000);    
   };
 
   useEffect(() => {
@@ -56,8 +51,6 @@ function Details() {
 
     fetchData();
   }, [token, user, id]);
-
-
 
   // Pegar os detalhes do titulo pelo id
   useEffect(() => {
@@ -159,7 +152,6 @@ function Details() {
   if(titleDetails.backgroundImg === "Não informado"){
     titleDetails.backgroundImg = ""
   }
-
 
   return (
     <div className='details'>
