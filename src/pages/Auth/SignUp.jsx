@@ -49,7 +49,9 @@ const Form = () => {
       alert(response.data); 
       navigate("/signin");
     } catch (error) {
-      console.error(error);
+      if(error.response.data.msg){
+        alert(error.response.data.msg)
+      }
     }
   };
 

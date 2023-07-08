@@ -18,7 +18,7 @@ function SigninForm() {
         navigate("/");
       })
       .catch((error) => {
-        console.log("Erro:" + error.response.data.message);
+        console.log("Erro:" + error.response.data.msg);
       });
   }
 
@@ -68,7 +68,7 @@ function SigninForm() {
       login(user, token)
      return navigate("/");
     } catch (error) {
-      alert(error.response.data.message)
+      alert(error.response.data.msg)
     }
   };
 
