@@ -4,6 +4,12 @@
   color: var(--text-color);
   margin-bottom: 7rem;
 
+    &.no-favorites {
+      text-align: center;
+      color: var(--text-color);
+      font-size: clamp(1.8rem, 1.8vw, 3rem);
+    }
+
     .cards {
       display: flex;
       flex-wrap: wrap;

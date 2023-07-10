@@ -64,7 +64,7 @@ function Favorites({ searchValue, onFilter}) {
   }
 
   if (titlesFavorites.length === 0) {
-    return <div className="favorites">Nenhum título favoritado no momento!</div>;
+    return <div className="favorites no-favorites">Nenhum título favoritado no momento! 🥺</div>;
   }
 
   return (
