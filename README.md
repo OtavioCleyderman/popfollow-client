@@ -151,7 +151,7 @@ Pronto, após realizar os passos acima o projeto já iniciou e está rodando na 
 - [ ]  Refatorar o código e melhorar a performance
 - [ ]  Parece que chegamos ao fim, mas não, sempre termos melhorias a acrescentar!
 
-# Contrinuindo
+# Contribuindo
 
 Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
